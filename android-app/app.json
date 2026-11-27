@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "GymLog",
+    "slug": "gymlog",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0C0D10",
+    "ios": {
+      "bundleIdentifier": "com.gymlog.tracker",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID or Touch ID to quickly unlock your GymLog workouts."
+      }
+    },
+    "android": {
+      "package": "com.gymlog.tracker",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "backgroundColor": "#0C0D10",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.VIBRATE",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-sharing",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Use Face ID to quickly unlock your GymLog workouts."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#22C55E"
+        }
+      ],
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0C0D10"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "57a86878-f495-40ed-9838-8a594c76b744"
+      }
+    }
+  }
+}
